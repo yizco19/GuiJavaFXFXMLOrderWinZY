@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #4944cf;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.zy.LoginZYController">
+   <children>
+      <HBox prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <VBox alignment="CENTER" prefHeight="400.0" prefWidth="277.0">
+               <children>
+                  <ImageView accessibleText="Logo" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../vr/logoZY.jpg" />
+                     </image></ImageView>
+                  <Label accessibleText="Welcome to" text="Welcome To">
+                     <font>
+                        <Font name="System Bold" size="30.0" />
+                     </font>
+                     <textFill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.2763157784938812" green="0.21518944203853607" blue="0.1982821673154831" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.2137426882982254" green="0.9473684430122375" blue="0.10087719559669495" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                  </Label>
+                  <Label accessibleText="ZY" text="ZY">
+                     <font>
+                        <Font name="System Bold" size="30.0" />
+                     </font>
+                     <textFill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.2763157784938812" green="0.21518944203853607" blue="0.1982821673154831" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.2137426882982254" green="0.9473684430122375" blue="0.10087719559669495" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox prefHeight="400.0" prefWidth="331.0" style="-fx-background-color: white;">
+               <children>
+                  <Label accessibleText="Welcome To" text="Welcome To">
+                     <font>
+                        <Font name="System Bold" size="30.0" />
+                     </font>
+                     <textFill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.2763157784938812" green="0.21518944203853607" blue="0.1982821673154831" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.24561403691768646" green="0.5497075915336609" blue="0.9473684430122375" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                  </Label>
+                  <Label accessibleText="Introduce..." text="Introduce..." textFill="#a9b1ba">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label accessibleText="Username label" text="Username">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                     <textFill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.2763157784938812" green="0.21518944203853607" blue="0.1982821673154831" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.43518519401550293" green="0.6799382567405701" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <TextField fx:id="text_username" accessibleHelp="Introduce the username" accessibleText="username textfield" promptText="username">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </TextField>
+                  <Label accessibleText="Password label" text="Password">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                     <textFill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.2763157784938812" green="0.21518944203853607" blue="0.1982821673154831" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.43518519401550293" green="0.6799382567405701" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                  </Label>
+                  <PasswordField fx:id="text_password" accessibleHelp="Introduce the pasword" accessibleText="password textfield" promptText="password">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </PasswordField>
+                  <HBox alignment="CENTER" prefHeight="69.0" prefWidth="287.0" spacing="50.0">
+                     <children>
+                        <Button accessibleText="Forgot Password" mnemonicParsing="false" prefHeight="31.0" prefWidth="156.0" style="-fx-background-color: white;" text="Forgot Password" textFill="#6e61ae">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btn_login" accessibleHelp="Press me to sign in" accessibleText="Sign in" mnemonicParsing="false" onAction="#onClick_Login" prefHeight="43.0" prefWidth="105.0" style="-fx-background-color: #0abafa; -fx-border-color: #0abafa; -fx-border-width: 2; -fx-border-radius: 4;" text="Sign in" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <Separator prefHeight="0.0" prefWidth="600.0" />
+                  <Button fx:id="btn_Sign" accessibleText="Sign up" mnemonicParsing="false" prefHeight="34.0" prefWidth="275.0" style="-fx-background-color: white;" stylesheets="@../../styling/fullpackstyling.css" text="Sign up" textFill="#2200ff">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </padding>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</StackPane>

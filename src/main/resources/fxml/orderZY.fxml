@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.input.KeyCodeCombination?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="498.0" prefWidth="642.0" style="-fx-background-color: #74a3ed;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.zy.OrderZYController">
+   <children>
+      <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0">
+         <children>
+            <MenuBar prefHeight="34.0" prefWidth="642.0" style="-fx-background-color: black;">
+               <menus>
+                  <Menu style="-fx-text-fill: white; -fx-font-size: 15; -fx-font-weight: bold;" text="App">
+                     <items>
+                        <MenuItem onAction="#handleViewFullOrder" text="View Full Order">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="C" control="UP" meta="UP" shift="UP" shortcut="ANY" />
+                           </accelerator>
+                           <graphic>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../vr/imgView.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </MenuItem>
+                        <MenuItem onAction="#handleCalculator" text="Calculator">
+                            <accelerator>
+                              <KeyCodeCombination alt="UP" code="V" control="UP" meta="UP" shift="UP" shortcut="ANY" />
+                           </accelerator>
+                           <graphic>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../vr/imgCalculator.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </MenuItem>
+                        <MenuItem onAction="#handleExit" text="Exit">
+                            <accelerator>
+                              <KeyCodeCombination alt="UP" code="E" control="UP" meta="UP" shift="UP" shortcut="ANY" />
+                           </accelerator>
+                           <graphic>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../vr/imgExitApp.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </MenuItem>
+                     </items>
+                  </Menu>
+                  <Menu style="-fx-font-size: 15; -fx-font-weight: bold;" text="Help">
+                     <items>
+                        <MenuItem onAction="#handleInformation" text="Information">
+                           <graphic>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../vr/informationbutton_83733.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="I" control="UP" meta="UP" shift="UP" shortcut="ANY" />
+                           </accelerator></MenuItem>
+                        <MenuItem onAction="#handleCompany" text="Company">
+                           <graphic>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../vr/iconZY.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="U" control="UP" meta="UP" shift="UP" shortcut="ANY" />
+                           </accelerator></MenuItem>
+                        <MenuItem onAction="#handleAbout" text="About">
+                           <graphic>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../vr/imgAbout.jpg" />
+                                 </image></ImageView>
+                           </graphic>
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="A" control="UP" meta="UP" shift="UP" shortcut="ANY" />
+                           </accelerator></MenuItem>
+                     </items>
+                  </Menu>
+               </menus>
+            </MenuBar>
+            <HBox prefHeight="508.0" prefWidth="642.0">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="466.0" prefWidth="201.0">
+                     <children>
+                        <ImageView accessibleHelp="show Logo" accessibleText="Logo" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../logoZY.jpg" />
+                           </image></ImageView>
+                        <Label accessibleHelp="ZY App" accessibleText="ZY App" text="ZY App">
+                           <font>
+                              <Font name="System Bold" size="31.0" />
+                           </font>
+                           <textFill>
+                              <LinearGradient endX="1.0" endY="1.0">
+                                 <stops>
+                                    <Stop>
+                                       <color>
+                                          <Color red="0.7894737124443054" green="0.21929824352264404" blue="0.21929824352264404" />
+                                       </color>
+                                    </Stop>
+                                    <Stop offset="1.0">
+                                       <color>
+                                          <Color red="1.0" green="1.0" blue="1.0" />
+                                       </color>
+                                    </Stop>
+                                 </stops>
+                              </LinearGradient>
+                           </textFill>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="493.0" prefWidth="442.0" style="-fx-background-color: white;">
+                     <children>
+                        <GridPane prefHeight="301.0" prefWidth="405.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Label accessibleText="Date and Time  label" text="Date and Time: ">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                                 <textFill>
+                                    <LinearGradient endX="1.0" endY="1.0">
+                                       <stops>
+                                          <Stop>
+                                             <color>
+                                                <Color />
+                                             </color>
+                                          </Stop>
+                                          <Stop offset="1.0">
+                                             <color>
+                                                <Color red="0.14290936291217804" green="0.37240496277809143" blue="0.9078947305679321" />
+                                             </color>
+                                          </Stop>
+                                       </stops>
+                                    </LinearGradient>
+                                 </textFill>
+                              </Label>
+                              <Label accessibleText="type label" text="Type:" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                                 <textFill>
+                                    <LinearGradient endX="1.0" endY="1.0">
+                                       <stops>
+                                          <Stop>
+                                             <color>
+                                                <Color />
+                                             </color>
+                                          </Stop>
+                                          <Stop offset="1.0">
+                                             <color>
+                                                <Color red="0.14290936291217804" green="0.37240496277809143" blue="0.9078947305679321" />
+                                             </color>
+                                          </Stop>
+                                       </stops>
+                                    </LinearGradient>
+                                 </textFill>
+                              </Label>
+                              <Label accessibleText="table number label" text="Table Number:" GridPane.rowIndex="2">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                                 <textFill>
+                                    <LinearGradient endX="1.0" endY="1.0">
+                                       <stops>
+                                          <Stop>
+                                             <color>
+                                                <Color />
+                                             </color>
+                                          </Stop>
+                                          <Stop offset="1.0">
+                                             <color>
+                                                <Color red="0.14290936291217804" green="0.37240496277809143" blue="0.9078947305679321" />
+                                             </color>
+                                          </Stop>
+                                       </stops>
+                                    </LinearGradient>
+                                 </textFill>
+                              </Label>
+                              <Label accessibleText="full name label" text="Full Name:" GridPane.rowIndex="3">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                                 <textFill>
+                                    <LinearGradient endX="1.0" endY="1.0">
+                                       <stops>
+                                          <Stop>
+                                             <color>
+                                                <Color />
+                                             </color>
+                                          </Stop>
+                                          <Stop offset="1.0">
+                                             <color>
+                                                <Color red="0.14290936291217804" green="0.37240496277809143" blue="0.9078947305679321" />
+                                             </color>
+                                          </Stop>
+                                       </stops>
+                                    </LinearGradient>
+                                 </textFill>
+                              </Label>
+                              <Label accessibleText="email label" text="Email:" GridPane.rowIndex="4">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                                 <textFill>
+                                    <LinearGradient endX="1.0" endY="1.0">
+                                       <stops>
+                                          <Stop>
+                                             <color>
+                                                <Color />
+                                             </color>
+                                          </Stop>
+                                          <Stop offset="1.0">
+                                             <color>
+                                                <Color red="0.14290936291217804" green="0.37240496277809143" blue="0.9078947305679321" />
+                                             </color>
+                                          </Stop>
+                                       </stops>
+                                    </LinearGradient>
+                                 </textFill>
+                              </Label>
+                              <Label accessibleText="grand total label" text="Grand Total:" GridPane.rowIndex="5">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                                 <textFill>
+                                    <LinearGradient endX="1.0" endY="1.0">
+                                       <stops>
+                                          <Stop>
+                                             <color>
+                                                <Color />
+                                             </color>
+                                          </Stop>
+                                          <Stop offset="1.0">
+                                             <color>
+                                                <Color red="0.14290936291217804" green="0.37240496277809143" blue="0.9078947305679321" />
+                                             </color>
+                                          </Stop>
+                                       </stops>
+                                    </LinearGradient>
+                                 </textFill>
+                              </Label>
+                              <Label accessibleText="payment method label" text="Payment Method:" GridPane.rowIndex="6">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                                 <textFill>
+                                    <LinearGradient endX="1.0" endY="1.0">
+                                       <stops>
+                                          <Stop>
+                                             <color>
+                                                <Color />
+                                             </color>
+                                          </Stop>
+                                          <Stop offset="1.0">
+                                             <color>
+                                                <Color red="0.14290936291217804" green="0.37240496277809143" blue="0.9078947305679321" />
+                                             </color>
+                                          </Stop>
+                                       </stops>
+                                    </LinearGradient>
+                                 </textFill>
+                              </Label>
+                              <Label accessibleText="tipping label" text="Tipping:" GridPane.rowIndex="7">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                                 <textFill>
+                                    <LinearGradient endX="1.0" endY="1.0">
+                                       <stops>
+                                          <Stop>
+                                             <color>
+                                                <Color />
+                                             </color>
+                                          </Stop>
+                                          <Stop offset="1.0">
+                                             <color>
+                                                <Color red="0.14290936291217804" green="0.37240496277809143" blue="0.9078947305679321" />
+                                             </color>
+                                          </Stop>
+                                       </stops>
+                                    </LinearGradient>
+                                 </textFill>
+                              </Label>
+                              <Label accessibleText="request invoice  label" text="Request Invoice:" GridPane.rowIndex="8">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                                 <textFill>
+                                    <LinearGradient endX="1.0" endY="1.0">
+                                       <stops>
+                                          <Stop>
+                                             <color>
+                                                <Color />
+                                             </color>
+                                          </Stop>
+                                          <Stop offset="1.0">
+                                             <color>
+                                                <Color red="0.14290936291217804" green="0.37240496277809143" blue="0.9078947305679321" />
+                                             </color>
+                                          </Stop>
+                                       </stops>
+                                    </LinearGradient>
+                                 </textFill>
+                              </Label>
+                              <Spinner accessibleHelp="Choose how many people" accessibleText="Number of table" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <ComboBox accessibleHelp="Choose one option" accessibleText="Type ComboBox" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <ComboBox accessibleHelp="Choose one payment method" accessibleText="Payment method ComboBox " prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                              <ComboBox accessibleHelp="Choose the tip" accessibleText="Tipping ComboBox " prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                              <CheckBox accessibleHelp="Choose if your want  invoice" accessibleText="request invoice Textfield" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                              <TextField accessibleHelp="Introduce the grand total" accessibleText="grand total texfield " GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                              <TextField accessibleHelp="Introduce the email" accessibleText="email  texfield" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                              <TextField accessibleHelp="Introduce the full name" accessibleText="full name texfield" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                              <Label fx:id="time" accessibleHelp="show CURRENT TIME" accessibleText="CURRENT TIME" text="Time" GridPane.columnIndex="1">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                                 <textFill>
+                                    <LinearGradient endX="1.0" endY="1.0">
+                                       <stops>
+                                          <Stop>
+                                             <color>
+                                                <Color />
+                                             </color>
+                                          </Stop>
+                                          <Stop offset="1.0">
+                                             <color>
+                                                <Color red="0.14290936291217804" green="0.37240496277809143" blue="0.9078947305679321" />
+                                             </color>
+                                          </Stop>
+                                       </stops>
+                                    </LinearGradient>
+                                 </textFill>
+                              </Label>
+                           </children>
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </VBox.margin>
+                        </GridPane>
+                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="30.0">
+                           <children>
+                              <VBox prefHeight="100.0" prefWidth="197.0">
+                                 <children>
+                                    <Label accessibleText="Customer comments  label" text="Customer Comments:">
+                                       <font>
+                                          <Font name="System Bold" size="16.0" />
+                                       </font>
+                                       <textFill>
+                                          <LinearGradient endX="1.0" endY="1.0">
+                                             <stops>
+                                                <Stop>
+                                                   <color>
+                                                      <Color />
+                                                   </color>
+                                                </Stop>
+                                                <Stop offset="1.0">
+                                                   <color>
+                                                      <Color red="0.14290936291217804" green="0.37240496277809143" blue="0.9078947305679321" />
+                                                   </color>
+                                                </Stop>
+                                             </stops>
+                                          </LinearGradient>
+                                       </textFill>
+                                    </Label>
+                                    <TextArea accessibleHelp="Introduce the comment" accessibleText="textfield customer Comments" prefHeight="75.0" prefWidth="144.0" />
+                                 </children>
+                              </VBox>
+                              <Button accessibleHelp="Press me to take order" accessibleText="Button Take Order" mnemonicParsing="false" style="-fx-background-color: #1770ff;" text="Take Order" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="19.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </HBox>
+                     </children>
+                     <padding>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </padding>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</StackPane>
